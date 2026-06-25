@@ -1,10 +1,12 @@
 # skill-strip-ai-tells
 
-De-AI-ify text by fixing AI formatting habits. Use when reviewing or cleaning up AI-generated text, comments, docs, commit messages, or markdown. Fixes dashes, arrows, bullet styles, over-bolding, and other AI tells.
+Audit, rewrite, or edit text to strip AI writing tells and tighten prose. Use when reviewing or cleaning up AI-generated text, comments, docs, commit messages, or markdown. Fixes dashes, inflated vocabulary, hedging, over-bolding, and structural tells.
 
 ## Why
 
-The goal is to make AI-assisted text read more naturally and approachably, not to deceive anyone. AI tools have characteristic formatting habits (em-dashes everywhere, over-bolding, decorative emoji, "Great question!" openers) that make writing feel stiff and templated. This skill strips those habits so the result reads like something a person actually wrote, in your own voice. It's about quality and readability, not disguising authorship.
+The goal is to make AI-assisted text read more naturally and approachably, not to deceive anyone. AI tools have characteristic habits (em-dashes everywhere, inflated vocabulary, over-bolding, decorative emoji, "Great question!" openers) that make writing feel stiff and templated. This skill strips those habits so the result reads like something a person actually wrote, in your own voice. It's about quality and readability, not disguising authorship.
+
+The skill is the full pass and runs in three modes (detect, rewrite, edit). A trimmed always-on subset of these rules lives in the user's global `AGENTS.md` under Prose Style, so every response gets some benefit without invoking the skill.
 
 ## Usage
 
