@@ -188,11 +188,12 @@ nothing.
   over length.)
 - Vague attribution ("studies show") => cite it or cut it.
 
-Inflated vocabulary is filler: use the plainest word that keeps the meaning. You
-don't need a list. If a plainer word loses nothing, take it (leverage or utilize
-=> use, delve or deep-dive => look at, streamline => simplify, in order to => to).
-Keep the word when it's the precise term, not decoration (robust statistics,
-financial leverage, a comprehensive test suite).
+Inflated vocabulary is filler: use the plainest word that keeps the meaning. Some
+tells worth recognizing (examples, not a find-replace list): underscores, serves
+as, testament to, showcase, leverage, utilize, delve or deep-dive, streamline,
+and robust or comprehensive when they're decoration. Keep the word when it's the
+precise term (robust statistics, financial leverage, a comprehensive test suite);
+swap it only when it adds nothing.
 
 Glyphs, last and least: em-dashes, curly quotes, and double spaces read as
 machine defaults to some people. Swap them if you care, but don't spend real
