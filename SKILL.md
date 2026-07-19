@@ -188,29 +188,11 @@ nothing.
   over length.)
 - Vague attribution ("studies show") => cite it or cut it.
 
-Inflated vocabulary. First check the word is filler in this sentence. If it's the
-precise term (robust statistics, financial leverage, a comprehensive test suite),
-keep it. Only when it adds nothing, swap:
-
-| Filler use | Plain swap |
-|---|---|
-| delve / dive into / deep dive | look at, explore, dig into |
-| leverage / utilize | use |
-| robust | strong, reliable, solid |
-| comprehensive | thorough, complete, full |
-| seamless / seamlessly | smooth, easy |
-| pivotal / crucial | important, key |
-| underscores | highlights, shows |
-| testament to | shows, proves |
-| showcase | show, demonstrate |
-| in order to | to |
-| due to the fact that | because |
-| serves as | is |
-| boasts / features (verb) | has, includes |
-| facilitate | help, enable |
-| streamline | simplify, speed up |
-| myriad / plethora | many |
-| paradigm | model, approach |
+Inflated vocabulary is filler: use the plainest word that keeps the meaning. You
+don't need a list. If a plainer word loses nothing, take it (leverage or utilize
+=> use, delve or deep-dive => look at, streamline => simplify, in order to => to).
+Keep the word when it's the precise term, not decoration (robust statistics,
+financial leverage, a comprehensive test suite).
 
 Glyphs, last and least: em-dashes, curly quotes, and double spaces read as
 machine defaults to some people. Swap them if you care, but don't spend real
