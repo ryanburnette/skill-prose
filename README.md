@@ -32,3 +32,5 @@ with your agent harness and invoke via `skill:prose`.
 ## Structure
 
 - `SKILL.md`: skill instructions and frontmatter
+- `references/`: detail loaded on demand, kept out of the always-loaded file
+  - `simplified-technical-english.md`: the STE adaptation for docs
