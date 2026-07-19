@@ -50,7 +50,12 @@ qualifier is not padding.
 ## Pick the context
 
 Figure out what you are writing, then apply that profile on top of the core. If
-none fits, the core alone is enough.
+none fits, the core alone is enough. Getting this wrong is cheap: the core is
+always on and carries the high-value rules, so a misread costs you a mismatched
+structure at worst, not a bad answer. When two profiles fit, don't pick one. Take
+the primary from the delivery channel and borrow from the other: a PR
+description is direct-communication intent in docs structure (what, why,
+how-to-test).
 
 ### Direct communication
 
@@ -177,7 +182,10 @@ nothing.
   `**Word:** explanation` unless it's a real definition list.
 - Forced rule-of-three; vary groupings, two or four is fine.
 - Uniform rhythm. Metronomic sentence and paragraph length is a bigger tell than
-  any single word. Mix short with long; let some paragraphs be one line.
+  any single word. In anything longer than a few lines, read it back: if every
+  sentence runs the same length and shape, combine two or break one. Let some
+  paragraphs be one line. (Skip this for a three-line reply; rhythm only shows
+  over length.)
 - Vague attribution ("studies show") => cite it or cut it.
 
 Inflated vocabulary. First check the word is filler in this sentence. If it's the
@@ -204,6 +212,6 @@ keep it. Only when it adds nothing, swap:
 | myriad / plethora | many |
 | paradigm | model, approach |
 
-Glyphs, last and least: em-dashes (`—`), en-dashes (`–`), curly quotes, and
-double spaces read as machine defaults to some people. Swap them for a comma,
-parentheses, or two sentences if you care, but don't spend real energy on it.
+Glyphs, last and least: em-dashes, curly quotes, and double spaces read as
+machine defaults to some people. Swap them if you care, but don't spend real
+energy on it.
