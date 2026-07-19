@@ -31,7 +31,7 @@ test: drop each word or qualifier, and if the sentence still means the same
 thing, leave it out. But brevity never removes load-bearing content: the reason,
 the number, the ticket link, anything the reader can't reconstruct. Cutting a
 needed clause is a worse error than one extra sentence. For inflated verbs to
-replace, see the vocabulary table.
+replace, see Inflated vocabulary in the Quick reference.
 
 - "It's worth noting that the API will reject any input that happens to be empty." => "The API rejects empty input."
 - Too far: "Reverted." => "Reverted the cache change; it broke prod login (#482)."
