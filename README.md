@@ -12,12 +12,13 @@ reading (a buried answer, hedging, inflated vocabulary) get fixed because they
 cost clarity or brevity, not because they look a certain way.
 
 The core (clarity, brevity, accuracy) always applies. On top of it, profiles
-tune the guidance for four contexts: direct communication, technical
-documentation, code comments, and commit messages. Each core principle carries a
-concrete test, and the profiles anchor to established standards (Diátaxis for
-docs, Beams' rules for commits) rather than inventing guidance from scratch. A
-trimmed always-on subset lives in the user's global `AGENTS.md` under Prose
-Style, so every response gets some benefit without invoking the skill.
+tune the guidance for five contexts: direct communication, technical
+documentation, user-facing text, code comments, and commit messages. Each core
+principle carries a concrete test, and the profiles anchor to established
+standards (Diátaxis for docs, Beams' rules for commits, a flexible Simplified
+Technical English adaptation for procedures) rather than inventing guidance from
+scratch. A trimmed always-on subset lives in the user's global `AGENTS.md` under
+Prose Style, so every response gets some benefit without invoking the skill.
 
 ## Modes
 
