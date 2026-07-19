@@ -61,6 +61,9 @@ Chat, PR replies, Slack, email to a person who shares your context.
 - Assume shared context. Don't recap what they just said.
 - Terseness reads as respect for their time, not rudeness, but don't cut context
   the reader needs to act. Skip pleasantries, not substance.
+- Match courtesy to the reader. A peer in a thread needs none; an external or
+  non-technical reader still gets a brief, warm frame. Cut ceremony, not the
+  warmth that is the substance for them.
 - No headers on a three-line reply. No structure for its own sake.
 
 Example: "Can't repro on main. What commit are you on?" not "Thanks for
@@ -87,6 +90,8 @@ failure. Then:
   Verify commands, flags, paths, and versions against the current code, and run
   examples before claiming they work.
 - State prerequisites and the gotchas that bite.
+- A recognized pattern (cause and fix, what/why/how-to-test) earns light
+  structure. That is not the decoration the core warns against.
 - Skip marketing tone and significance inflation.
 
 #### Simplified Technical English (optional)
@@ -110,6 +115,19 @@ terms. Apply:
 - One term per concept. Pick a name and reuse it verbatim; don't switch between
   "directory" and "folder" for the same thing.
 - Break noun stacks longer than three words; hyphenate or rephrase.
+
+### User-facing text
+
+Error messages, CLI output, empty states, changelogs: prose a person reads at a
+bad moment or while scanning.
+
+- State the cause and the next action. "FOO_TOKEN is not set. Set it and re-run."
+  not "An error occurred."
+- No blame, no apology theater, no filler ("Please", "in order to", "kindly").
+- Plain words over internal jargon; the reader didn't write your code.
+- Changelogs and release notes: group by change type, describe the user-visible
+  effect, don't narrate the implementation ("empty bodies no longer 500", not
+  "added a nil check").
 
 ### Code comments
 
