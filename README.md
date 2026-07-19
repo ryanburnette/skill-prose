@@ -1,17 +1,37 @@
-# skill-strip-ai-tells
+# skill-prose
 
-Audit, rewrite, or edit text to strip AI writing tells and tighten prose. Use when reviewing or cleaning up AI-generated text, comments, docs, commit messages, or markdown. Fixes dashes, inflated vocabulary, hedging, over-bolding, and structural tells.
+Write clear, brief, accurate prose for a human reader. Use when writing or
+editing anything a person will read: a message, technical docs, a code comment,
+or a commit message. Applies guidance tuned to the context, and can also clean
+up existing text.
 
 ## Why
 
-The goal is to make AI-assisted text read more naturally and approachably, not to deceive anyone. AI tools have characteristic habits (em-dashes everywhere, inflated vocabulary, over-bolding, decorative emoji, "Great question!" openers) that make writing feel stiff and templated. This skill strips those habits so the result reads like something a person actually wrote, in your own voice. It's about quality and readability, not disguising authorship.
+Anything a person reads should be clear, brief, and accurate. Habits that hurt
+reading (a buried answer, hedging, inflated vocabulary) get fixed because they
+cost clarity or brevity, not because they look a certain way.
 
-The skill is the full pass and runs in three modes (detect, rewrite, edit). A trimmed always-on subset of these rules lives in the user's global `AGENTS.md` under Prose Style, so every response gets some benefit without invoking the skill.
+The core (clarity, brevity, accuracy) always applies. On top of it, profiles
+tune the guidance for five contexts: direct communication, technical
+documentation, user-facing text, code comments, and commit messages. Each core
+principle carries a concrete test, and the profiles anchor to established
+standards (Diátaxis for docs, Beams' rules for commits, a flexible Simplified
+Technical English adaptation for procedures) rather than inventing guidance from
+scratch. A trimmed always-on subset lives in the user's global `AGENTS.md` under
+Prose Style, so every response gets some benefit without invoking the skill.
+
+## Modes
+
+The full pass runs in three modes: `detect` (flag only), `rewrite` (return a
+clean version), and `edit` (change a file in place). Default is `rewrite`.
 
 ## Usage
 
-This is an [Agent Skills](https://agentskills.io/) compatible skill. Load it with your agent harness and invoke via `skill:strip-ai-tells`.
+This is an [Agent Skills](https://agentskills.io/) compatible skill. Load it
+with your agent harness and invoke via `skill:prose`.
 
 ## Structure
 
-- `SKILL.md` — Skill instructions and frontmatter
+- `SKILL.md`: skill instructions and frontmatter
+- `references/`: detail loaded on demand, kept out of the always-loaded file
+  - `simplified-technical-english.md`: the STE adaptation for docs
