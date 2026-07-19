@@ -171,8 +171,9 @@ only fix the author's own text.
 
 ## Quick reference
 
-The habits that most often cost clarity or brevity. Fix on sight when they add
-nothing.
+A scan-list for a detect or edit pass, kept complete on purpose: some items are
+the Core principles turned into specific habits to catch, the rest are tells the
+Core doesn't name. Fix on sight when they add nothing.
 
 - Buried answer; throat-clearing opener ("Great question!", "In this section
   we'll explore"); padding closer ("Let me know if...").
