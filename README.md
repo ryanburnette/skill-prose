@@ -31,4 +31,4 @@ with your agent harness and invoke via `skill:prose`.
 
 ## Structure
 
-- `SKILL.md` — skill instructions and frontmatter
+- `SKILL.md`: skill instructions and frontmatter

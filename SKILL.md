@@ -3,9 +3,9 @@ name: prose
 description: Write clear, brief, accurate prose for a human reader. Use when writing or editing anything a person will read, such as a message, technical docs, a code comment, or a commit message. Applies guidance for the specific context and can also clean up existing text.
 ---
 
-Anything a person will read should be clear, brief, and accurate. That is the
-whole job. Different kinds of writing weight those three differently, so this
-skill has a core that always applies and profiles that tune it for the context.
+Anything a person will read should be clear, brief, and accurate. Different kinds
+of writing weight those three differently, so this skill has a core that always
+applies and profiles that tune it for the context.
 
 Fix a habit when it costs clarity or brevity, not because it looks a certain
 way. That keeps the guidance useful across models, which each have their own tics.
@@ -15,21 +15,26 @@ way. That keeps the guidance useful across models, which each have their own tic
 Always on, under every profile. Each principle comes with a test you can run on
 a sentence.
 
-**Clarity.** Lead with the point; one idea per sentence. The strongest lever is
-grammatical: make the real actor the subject and the action the verb (Williams,
-*Style: Lessons in Clarity and Grace*). Undo nominalizations, where a verb has
-been buried in a noun: "make a decision" becomes "decide", "provides a
-description of" becomes "describes". Test: if the reader stopped after your first
-sentence, would they have the answer? If not, move it up.
+**Clarity.** Lead with the point; keep each sentence to one main idea. The
+strongest lever is grammatical: make the real actor the subject and the action
+the verb, and undo nominalizations, where a verb is hidden inside a noun.
+Passive voice is fine when the thing acted on is what you want to talk about
+("the row was already deleted"); convert it only when it hides who acted. Test:
+if the reader stopped after your first sentence, would they have the answer? If
+not, move it up.
 
-- "The implementation of the change was carried out by the team." => "The team changed it."
+- "The guide provides a description of the API." => "The guide describes the API." (verb un-buried)
+- "The migration was run by the on-call engineer." => "The on-call engineer ran the migration." (actor as subject)
 
 **Brevity.** Write the shortest version that keeps the meaning. Run the deletion
 test: drop each word or qualifier, and if the sentence still means the same
-thing, leave it out (Strunk, "omit needless words"). Prefer plain verbs ("is",
-"use", "shows") over inflated ones ("serves as", "leverage", "underscores").
+thing, leave it out. But brevity never removes load-bearing content: the reason,
+the number, the ticket link, anything the reader can't reconstruct. Cutting a
+needed clause is a worse error than one extra sentence. For inflated verbs to
+replace, see the vocabulary table.
 
 - "It's worth noting that the API will reject any input that happens to be empty." => "The API rejects empty input."
+- Too far: "Reverted." => "Reverted the cache change; it broke prod login (#482)."
 
 **Accuracy.** Say only what you can stand behind. Keep a qualifier when it
 changes what is true; cut it when it only softens tone. "Usually" in "the cache
@@ -54,7 +59,8 @@ Chat, PR replies, Slack, email to a person who shares your context.
 - Answer first (bottom line up front). Say the conclusion or the ask in the
   opening line, then support it.
 - Assume shared context. Don't recap what they just said.
-- Terseness reads as respect for their time, not rudeness. Skip pleasantries.
+- Terseness reads as respect for their time, not rudeness, but don't cut context
+  the reader needs to act. Skip pleasantries, not substance.
 - No headers on a three-line reply. No structure for its own sake.
 
 Example: "Can't repro on main. What commit are you on?" not "Thanks for
@@ -63,20 +69,24 @@ to. Could you let me know which commit you're on?"
 
 ### Technical documentation
 
-READMEs, guides, reference docs. First decide which of four kinds you are
-writing, because they have different jobs ([Diátaxis](https://diataxis.fr/)):
+READMEs, guides, reference docs. Ask what the reader needs, then serve one need
+per section. Those needs map to four kinds ([Diátaxis](https://diataxis.fr/)):
 
 - *tutorial*: teach a beginner by doing; take them by the hand to a result.
 - *how-to*: steps to accomplish one task for someone who has the basics.
 - *reference*: dry, complete facts to look up; describe, don't narrate.
 - *explanation*: the why and the tradeoffs; background, not steps.
 
-Mixing these in one section is the most common docs failure. Then:
+A whole document often mixes these (a README has a bit of each), but a single
+section should not. Blurring them within one section is the most common docs
+failure. Then:
 
 - Clarity and completeness outrank brevity here. Structure, lists, and examples
   earn their space when they help the reader.
-- Show a working example. State prerequisites and the gotchas that bite.
-- Accuracy matters most in this profile. Wrong docs are worse than no docs.
+- Accuracy matters most in this profile; wrong docs are worse than no docs.
+  Verify commands, flags, paths, and versions against the current code, and run
+  examples before claiming they work.
+- State prerequisites and the gotchas that bite.
 - Skip marketing tone and significance inflation.
 
 ### Code comments
@@ -102,11 +112,11 @@ Mixing these in one section is the most common docs failure. Then:
 
 How to apply the skill to a specific piece of text.
 
-- `detect` — flag issues only, don't rewrite. Output one line each: quote the
+- `detect`: flag issues only, don't rewrite. Output one line each: quote the
   text, name the issue, suggest the fix. Use when the author wants to decide, or
   is auditing text they don't want altered.
-- `rewrite` — return a clean version, then list what changed and why.
-- `edit` — change the file in place with minimal, targeted edits. Leave clean
+- `rewrite`: return a clean version, then list what changed and why.
+- `edit`: change the file in place with minimal, targeted edits. Leave clean
   passages alone. Don't rewrite quoted material, code blocks, or text attributed
   to someone else; flag those instead. Re-read after to confirm.
 
@@ -130,9 +140,11 @@ nothing.
   any single word. Mix short with long; let some paragraphs be one line.
 - Vague attribution ("studies show") => cite it or cut it.
 
-Inflated vocabulary, replace when used as filler:
+Inflated vocabulary. First check the word is filler in this sentence. If it's the
+precise term (robust statistics, financial leverage, a comprehensive test suite),
+keep it. Only when it adds nothing, swap:
 
-| Replace | With |
+| Filler use | Plain swap |
 |---|---|
 | delve / dive into / deep dive | look at, explore, dig into |
 | leverage / utilize | use |
@@ -152,10 +164,6 @@ Inflated vocabulary, replace when used as filler:
 | myriad / plethora | many |
 | paradigm | model, approach |
 
-A word here is only wrong as filler. When it's the precise term (robust
-statistics, financial leverage), leave it.
-
 Glyphs, last and least: em-dashes (`—`), en-dashes (`–`), curly quotes, and
-double spaces after periods read as machine defaults to some people. Swap them
-for a comma, parentheses, or two sentences if you care. This is the
-lowest-value item on the page, so don't spend real energy chasing it.
+double spaces read as machine defaults to some people. Swap them for a comma,
+parentheses, or two sentences if you care, but don't spend real energy on it.
