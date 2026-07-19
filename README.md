@@ -7,17 +7,15 @@ up existing text.
 
 ## Why
 
-Anything a person reads should be clear, brief, and accurate. That is the goal.
-This skill used to frame its job as stripping "AI tells," which turned into a
-brittle, model-specific fight over em-dashes and curly quotes. The new framing
-is positive: write well for the reader. The habits that genuinely hurt reading
-(a buried answer, hedging, inflated vocabulary) still get fixed, but because
-they cost clarity or brevity, not because they look machine-made. Glyph policing
-is demoted to a footnote.
+Anything a person reads should be clear, brief, and accurate. Habits that hurt
+reading (a buried answer, hedging, inflated vocabulary) get fixed because they
+cost clarity or brevity, not because they look a certain way.
 
 The core (clarity, brevity, accuracy) always applies. On top of it, profiles
-tune the guidance for the four things worth distinguishing: direct
-communication, technical documentation, code comments, and commit messages. A
+tune the guidance for four contexts: direct communication, technical
+documentation, code comments, and commit messages. Each core principle carries a
+concrete test, and the profiles anchor to established standards (Diátaxis for
+docs, Beams' rules for commits) rather than inventing guidance from scratch. A
 trimmed always-on subset lives in the user's global `AGENTS.md` under Prose
 Style, so every response gets some benefit without invoking the skill.
 

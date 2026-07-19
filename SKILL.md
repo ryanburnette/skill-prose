@@ -7,27 +7,37 @@ Anything a person will read should be clear, brief, and accurate. That is the
 whole job. Different kinds of writing weight those three differently, so this
 skill has a core that always applies and profiles that tune it for the context.
 
-This replaces chasing "AI tells." Habits like hedging or a buried answer get
-fixed because they hurt clarity or brevity, not because they look machine-made.
-Glyph policing (em-dashes, curly quotes) is near the bottom of what matters and
-varies by model, so it is a footnote here, not the point.
+Fix a habit when it costs clarity or brevity, not because it looks a certain
+way. That keeps the guidance useful across models, which each have their own tics.
 
 ## Core
 
-Always on, under every profile.
+Always on, under every profile. Each principle comes with a test you can run on
+a sentence.
 
-**Clarity.** Lead with the point. One idea per sentence. Concrete over abstract.
-Name things precisely instead of gesturing at them.
+**Clarity.** Lead with the point; one idea per sentence. The strongest lever is
+grammatical: make the real actor the subject and the action the verb (Williams,
+*Style: Lessons in Clarity and Grace*). Undo nominalizations, where a verb has
+been buried in a noun: "make a decision" becomes "decide", "provides a
+description of" becomes "describes". Test: if the reader stopped after your first
+sentence, would they have the answer? If not, move it up.
 
-**Brevity.** Write the shortest version that keeps the meaning. Cut
-throat-clearing openers and padding closings. Use plain verbs ("is", "use",
-"shows") over inflated ones ("serves as", "leverage", "underscores").
+- "The implementation of the change was carried out by the team." => "The team changed it."
+
+**Brevity.** Write the shortest version that keeps the meaning. Run the deletion
+test: drop each word or qualifier, and if the sentence still means the same
+thing, leave it out (Strunk, "omit needless words"). Prefer plain verbs ("is",
+"use", "shows") over inflated ones ("serves as", "leverage", "underscores").
+
+- "It's worth noting that the API will reject any input that happens to be empty." => "The API rejects empty input."
 
 **Accuracy.** Say only what you can stand behind. Keep a qualifier when it
 changes what is true; cut it when it only softens tone. "Usually" in "the cache
 is usually cold" carries information and stays; "I think" in "I think the API
-rejects empty input" does not and goes. Don't inflate significance. Verify
-names, paths, and facts before asserting them.
+rejects empty input" does not and goes. Don't inflate significance. Verify names,
+paths, and facts before asserting them.
+
+- "This groundbreaking fix dramatically improves everything." => "This fix cuts p99 latency by 40%."
 
 Brevity and accuracy pull against each other sometimes. Accuracy wins: a needed
 qualifier is not padding.
@@ -41,25 +51,33 @@ none fits, the core alone is enough.
 
 Chat, PR replies, Slack, email to a person who shares your context.
 
-- Dense and answer-first. Say the conclusion or the ask in the first line.
+- Answer first (bottom line up front). Say the conclusion or the ask in the
+  opening line, then support it.
 - Assume shared context. Don't recap what they just said.
 - Terseness reads as respect for their time, not rudeness. Skip pleasantries.
 - No headers on a three-line reply. No structure for its own sake.
 
-Example: "Can't repro on main — what commit are you on?" not "Thanks for
-flagging this! I wanted to follow up. I attempted to reproduce the issue you
-described, but I was unable to. Could you let me know which commit you're on?"
+Example: "Can't repro on main. What commit are you on?" not "Thanks for
+flagging this! I attempted to reproduce the issue you described but was unable
+to. Could you let me know which commit you're on?"
 
 ### Technical documentation
 
-READMEs, guides, reference docs.
+READMEs, guides, reference docs. First decide which of four kinds you are
+writing, because they have different jobs ([Diátaxis](https://diataxis.fr/)):
 
-- Goal: the reader can act correctly without you present.
+- *tutorial*: teach a beginner by doing; take them by the hand to a result.
+- *how-to*: steps to accomplish one task for someone who has the basics.
+- *reference*: dry, complete facts to look up; describe, don't narrate.
+- *explanation*: the why and the tradeoffs; background, not steps.
+
+Mixing these in one section is the most common docs failure. Then:
+
 - Clarity and completeness outrank brevity here. Structure, lists, and examples
-  are welcome when they help the reader.
+  earn their space when they help the reader.
 - Show a working example. State prerequisites and the gotchas that bite.
 - Accuracy matters most in this profile. Wrong docs are worse than no docs.
-- Still skip marketing tone and significance inflation.
+- Skip marketing tone and significance inflation.
 
 ### Code comments
 
@@ -70,12 +88,15 @@ READMEs, guides, reference docs.
 
 ### Commit messages
 
-- Follow the repo's conventions. The AGENTS.md "Commit Messages" section is the
+- The repo's conventions win. The AGENTS.md "Commit Messages" section is the
   source of truth: lowercase start, scope prefix, one logical change, no AI
   attribution.
-- Subject line should make sense scanning a log. Body explains why when the
-  change isn't self-evident.
-- "fix: reject empty payloads before enqueue" not "update code" or a paragraph.
+- Where it is silent, follow the common defaults: imperative subject ("add", not
+  "added"), roughly 50 characters or less, a blank line, then a body that
+  explains what and why rather than how ([Beams' seven rules](https://cbea.ms/git-commit/);
+  scope prefix from Conventional Commits).
+- The subject should read cleanly in a log: "fix: reject empty payloads before
+  enqueue", not "update code".
 
 ## Modes
 
@@ -100,7 +121,7 @@ nothing.
 
 - Buried answer; throat-clearing opener ("Great question!", "In this section
   we'll explore"); padding closer ("Let me know if...").
-- Hedging, especially stacked ("could potentially", "may eventually" — pick one).
+- Hedging, especially stacked ("could potentially", "may eventually"; pick one).
 - "It's not X, it's Y" framing => a direct positive statement.
 - Over-bolding: don't bold every key term, and don't lead list items with
   `**Word:** explanation` unless it's a real definition list.
@@ -129,12 +150,12 @@ Inflated vocabulary, replace when used as filler:
 | facilitate | help, enable |
 | streamline | simplify, speed up |
 | myriad / plethora | many |
-| leverage (metaphor) / paradigm | model, approach |
+| paradigm | model, approach |
 
 A word here is only wrong as filler. When it's the precise term (robust
 statistics, financial leverage), leave it.
 
 Glyphs, last and least: em-dashes (`—`), en-dashes (`–`), curly quotes, and
 double spaces after periods read as machine defaults to some people. Swap them
-for a comma, parentheses, or two sentences if you care. Don't spend real energy
-chasing them across models — it's the lowest-value item on this page.
+for a comma, parentheses, or two sentences if you care. This is the
+lowest-value item on the page, so don't spend real energy chasing it.
