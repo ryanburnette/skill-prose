@@ -89,6 +89,28 @@ failure. Then:
 - State prerequisites and the gotchas that bite.
 - Skip marketing tone and significance inflation.
 
+#### Simplified Technical English (optional)
+
+A flexible adaptation of [ASD-STE100](https://www.asd-ste100.org/) Simplified
+Technical English. Reach for it on install steps, how-tos, troubleshooting,
+runbooks, and READMEs, especially for a broad or non-native audience, or whenever
+the author asks. Skip it for prose that needs a voice: design rationale,
+explanation, an overview meant to persuade or contextualize.
+
+Flexible means the readability rules, not the certification apparatus. Don't
+enforce the ~900-word approved dictionary and don't drop necessary technical
+terms. Apply:
+
+- One instruction per sentence. Use the imperative for steps: "Run `make`", not
+  "the build is started by running make".
+- Short sentences: aim for 20 words or fewer in steps, 25 in descriptive text.
+- Active voice. Use passive only when the actor is unknown or irrelevant.
+- Simple tenses (present, past, simple future). Avoid perfect and progressive
+  forms where a simple one works.
+- One term per concept. Pick a name and reuse it verbatim; don't switch between
+  "directory" and "folder" for the same thing.
+- Break noun stacks longer than three words; hyphenate or rephrase.
+
 ### Code comments
 
 - Explain why, not what. The code already says what.
