@@ -11,7 +11,7 @@ Anything a person reads should be clear, brief, and accurate. Habits that hurt
 reading (a buried answer, hedging, inflated vocabulary) get fixed because they
 cost clarity or brevity, not because they look a certain way.
 
-The core (clarity, brevity, accuracy) always applies. On top of it, profiles
+The core (clarity, brevity, accuracy, and what it is) always applies. On top of it, profiles
 tune the guidance for five contexts: direct communication, technical
 documentation, user-facing text, code comments, and commit messages. Each core
 principle carries a concrete test, and the profiles anchor to established

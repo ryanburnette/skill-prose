@@ -3,9 +3,10 @@ name: prose
 description: Write clear, brief, accurate prose for a human reader. Use when writing or editing anything a person will read, such as a message, technical docs, a code comment, or a commit message. Applies guidance for the specific context and can also clean up existing text.
 ---
 
-Anything a person will read should be clear, brief, and accurate. Different kinds
-of writing weight those three differently, so this skill has a core that always
-applies and profiles that tune it for the context.
+Anything a person will read should be clear, brief, and accurate, and it
+should describe the thing as it is. Profiles weight clarity, brevity, and
+accuracy differently. The core always applies, and the profiles tune it
+for the context.
 
 Fix a habit when it costs clarity or brevity, not because it looks a certain
 way. That keeps the guidance useful across models, which each have their own tics.
@@ -46,6 +47,15 @@ paths, and facts before asserting them.
 
 Brevity and accuracy pull against each other sometimes. Accuracy wins: a needed
 qualifier is not padding.
+
+**What it is.** Describe the thing as it is. A reader who never saw an older
+version should still understand the sentence. Test: delete every mention of
+what it used to be, or of what it is not. If the useful part disappears with
+those words, the sentence is about the wrong thing. How it got here is a
+separate piece of writing, and only when someone asked for the history.
+
+- "Not an installer. There is no setup script." => "Each machine links the packages it uses."
+- "It's not X, it's Y." => say what it is.
 
 ## Pick the context
 
@@ -165,7 +175,7 @@ Core doesn't name. Fix on sight when they add nothing.
 - Buried answer; throat-clearing opener ("Great question!", "In this section
   we'll explore"); padding closer ("Let me know if...").
 - Hedging, especially stacked ("could potentially", "may eventually"; pick one).
-- "It's not X, it's Y" framing => a direct positive statement.
+- "It's not X, it's Y", or a denial of something removed ("there is no setup script") => say what it is. See What it is.
 - Over-bolding: don't bold every key term, and don't lead list items with
   `**Word:** explanation` unless it's a real definition list.
 - Forced rule-of-three; vary groupings, two or four is fine.
