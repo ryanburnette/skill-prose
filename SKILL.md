@@ -3,9 +3,10 @@ name: prose
 description: Write clear, brief, accurate prose for a human reader. Use when writing or editing anything a person will read, such as a message, technical docs, a code comment, or a commit message. Applies guidance for the specific context and can also clean up existing text.
 ---
 
-Anything a person will read should be clear, brief, and accurate. Different kinds
-of writing weight those three differently, so this skill has a core that always
-applies and profiles that tune it for the context.
+Anything a person will read should be clear, brief, and accurate, and it
+should describe the thing as it is. Profiles weight clarity, brevity, and
+accuracy differently. The core always applies, and the profiles tune it
+for the context.
 
 Fix a habit when it costs clarity or brevity, not because it looks a certain
 way. That keeps the guidance useful across models, which each have their own tics.
@@ -46,6 +47,21 @@ paths, and facts before asserting them.
 
 Brevity and accuracy pull against each other sometimes. Accuracy wins: a needed
 qualifier is not padding.
+
+**What it is.** Use this when the sentence is there to say what a thing is:
+a README, an overview, a reference entry, or an agent direction that states
+how something works. Describe that thing as it is. A reader who never saw
+an older version should still understand the sentence.
+
+Test: delete every mention of what it used to be, or of what it is not. If
+the useful part disappears with those words, the sentence is about the
+wrong thing.
+
+Keep the negative when it is the point. A ban ("Don't commit secrets"), a
+changelog, and an answer to "what changed?" are doing a different job.
+
+- "Not an installer. There is no setup script." => "Each machine links the packages it uses."
+- "It's not a cache, it's a database." => "It is a database."
 
 ## Pick the context
 
@@ -98,6 +114,7 @@ failure. Then:
 - A recognized pattern (cause and fix, what/why/how-to-test) earns light
   structure. That is not the decoration the core warns against.
 - Skip marketing tone and significance inflation.
+- A section that says what something is follows What it is. History belongs in a changelog, or in an answer to a question about the past.
 
 #### Simplified Technical English (optional)
 
@@ -165,7 +182,7 @@ Core doesn't name. Fix on sight when they add nothing.
 - Buried answer; throat-clearing opener ("Great question!", "In this section
   we'll explore"); padding closer ("Let me know if...").
 - Hedging, especially stacked ("could potentially", "may eventually"; pick one).
-- "It's not X, it's Y" framing => a direct positive statement.
+- Describing a thing by what it is not, or by a removed predecessor ("there is no setup script") => say what it is. A ban, a changelog, or an answer to "what changed?" keeps the negative. See What it is.
 - Over-bolding: don't bold every key term, and don't lead list items with
   `**Word:** explanation` unless it's a real definition list.
 - Forced rule-of-three; vary groupings, two or four is fine.

@@ -11,10 +11,12 @@ Anything a person reads should be clear, brief, and accurate. Habits that hurt
 reading (a buried answer, hedging, inflated vocabulary) get fixed because they
 cost clarity or brevity, not because they look a certain way.
 
-The core (clarity, brevity, accuracy) always applies. On top of it, profiles
-tune the guidance for five contexts: direct communication, technical
-documentation, user-facing text, code comments, and commit messages. Each core
-principle carries a concrete test, and the profiles anchor to established
+The core (clarity, brevity, accuracy, and what it is) always applies.
+What it is applies when the sentence is there to say what a thing is.
+On top of the core, profiles tune the guidance for five contexts: direct
+communication, technical documentation, user-facing text, code comments,
+and commit messages. Each core principle carries a concrete test, and
+the profiles anchor to established
 standards (Diátaxis for docs, Beams' rules for commits, a flexible Simplified
 Technical English adaptation for procedures) rather than inventing guidance from
 scratch. A trimmed always-on subset lives in the user's global `AGENTS.md` under
