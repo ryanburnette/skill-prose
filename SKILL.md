@@ -48,14 +48,20 @@ paths, and facts before asserting them.
 Brevity and accuracy pull against each other sometimes. Accuracy wins: a needed
 qualifier is not padding.
 
-**What it is.** Describe the thing as it is. A reader who never saw an older
-version should still understand the sentence. Test: delete every mention of
-what it used to be, or of what it is not. If the useful part disappears with
-those words, the sentence is about the wrong thing. How it got here is a
-separate piece of writing, and only when someone asked for the history.
+**What it is.** Use this when the sentence is there to say what a thing is:
+a README, an overview, a reference entry, or an agent direction that states
+how something works. Describe that thing as it is. A reader who never saw
+an older version should still understand the sentence.
+
+Test: delete every mention of what it used to be, or of what it is not. If
+the useful part disappears with those words, the sentence is about the
+wrong thing.
+
+Keep the negative when it is the point. A ban ("Don't commit secrets"), a
+changelog, and an answer to "what changed?" are doing a different job.
 
 - "Not an installer. There is no setup script." => "Each machine links the packages it uses."
-- "It's not X, it's Y." => say what it is.
+- "It's not a cache, it's a database." => "It is a database."
 
 ## Pick the context
 
@@ -108,6 +114,7 @@ failure. Then:
 - A recognized pattern (cause and fix, what/why/how-to-test) earns light
   structure. That is not the decoration the core warns against.
 - Skip marketing tone and significance inflation.
+- A section that says what something is follows What it is. History belongs in a changelog, or in an answer to a question about the past.
 
 #### Simplified Technical English (optional)
 
@@ -175,7 +182,7 @@ Core doesn't name. Fix on sight when they add nothing.
 - Buried answer; throat-clearing opener ("Great question!", "In this section
   we'll explore"); padding closer ("Let me know if...").
 - Hedging, especially stacked ("could potentially", "may eventually"; pick one).
-- "It's not X, it's Y", or a denial of something removed ("there is no setup script") => say what it is. See What it is.
+- Describing a thing by what it is not, or by a removed predecessor ("there is no setup script") => say what it is. A ban, a changelog, or an answer to "what changed?" keeps the negative. See What it is.
 - Over-bolding: don't bold every key term, and don't lead list items with
   `**Word:** explanation` unless it's a real definition list.
 - Forced rule-of-three; vary groupings, two or four is fine.
