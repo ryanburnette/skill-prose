@@ -19,8 +19,7 @@ and commit messages. Each core principle carries a concrete test, and
 the profiles anchor to established
 standards (Diátaxis for docs, Beams' rules for commits, a flexible Simplified
 Technical English adaptation for procedures) rather than inventing guidance from
-scratch. A trimmed always-on subset lives in the user's global `AGENTS.md` under
-Prose Style, so every response gets some benefit without invoking the skill.
+scratch.
 
 ## Modes
 
