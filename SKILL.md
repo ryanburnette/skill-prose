@@ -116,15 +116,6 @@ failure. Then:
 - Skip marketing tone and significance inflation.
 - A section that says what something is follows What it is. History belongs in a changelog, or in an answer to a question about the past.
 
-#### Simplified Technical English (optional)
-
-For steps, how-tos, troubleshooting, runbooks, and READMEs aimed at a broad or
-non-native audience, or whenever the author asks, apply a flexible adaptation of
-Simplified Technical English: short imperative sentences, one instruction each,
-active voice, one term per concept. Load `references/simplified-technical-english.md`
-for the full rules and examples. Skip it for prose that needs a voice: design
-rationale, explanation, a persuasive overview.
-
 ### User-facing text
 
 Error messages, CLI output, empty states, changelogs: prose a person reads at a
