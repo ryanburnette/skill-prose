@@ -17,8 +17,7 @@ On top of the core, profiles tune the guidance for five contexts: direct
 communication, technical documentation, user-facing text, code comments,
 and commit messages. Each core principle carries a concrete test, and
 the profiles anchor to established
-standards (Diátaxis for docs, Beams' rules for commits, a flexible Simplified
-Technical English adaptation for procedures) rather than inventing guidance from
+standards (Diátaxis for docs and Beams' rules for commits) rather than inventing guidance from
 scratch. A trimmed always-on subset lives in the user's global `AGENTS.md` under
 Prose Style, so every response gets some benefit without invoking the skill.
 
@@ -31,9 +30,3 @@ clean version), and `edit` (change a file in place). Default is `rewrite`.
 
 This is an [Agent Skills](https://agentskills.io/) compatible skill. Load it
 with your agent harness and invoke via `skill:prose`.
-
-## Structure
-
-- `SKILL.md`: skill instructions and frontmatter
-- `references/`: detail loaded on demand, kept out of the always-loaded file
-  - `simplified-technical-english.md`: the STE adaptation for docs
