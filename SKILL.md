@@ -50,18 +50,26 @@ qualifier is not padding.
 
 **What it is.** Use this when the sentence is there to say what a thing is:
 a README, an overview, a reference entry, or an agent direction that states
-how something works. Describe that thing as it is. A reader who never saw
-an older version should still understand the sentence.
+how something works. Say what that thing is. A reader who never saw an older
+version should still understand the sentence. A predecessor or a negation
+should not be the whole description.
 
-Test: delete every mention of what it used to be, or of what it is not. If
-the useful part disappears with those words, the sentence is about the
-wrong thing.
+Test, as a check: cover every mention of what it used to be, or of what it is
+not. If nothing true remains, you have not yet said what the thing is. Add
+that. Leave the covered words in place until it is clear they were only
+standing in for the description.
 
-Keep the negative when it is the point. A ban ("Don't commit secrets"), a
-changelog, and an answer to "what changed?" are doing a different job.
+Keep the negative when it carries a fact, a limit, a warning, or a distinction
+the reader would miss. A ban ("Don't commit secrets"), a changelog, and an
+answer to "what changed?" are the obvious cases. Unsure means keep it.
+
+In `edit` or `rewrite` on a durable document (a README, an `AGENTS.md`, a
+runbook, a guide), flag the sentence and leave it when the cut might drop one
+of those. In chat, decide and move on. `detect` flags and does not change the
+text.
 
 - "Not an installer. There is no setup script." => "Each machine links the packages it uses."
-- "It's not a cache, it's a database." => "It is a database."
+- "It does not cache results." stays. The limit is the fact. "It is not a cache." => "It is a database." once that is the whole point.
 
 ## Pick the context
 
@@ -158,7 +166,8 @@ How to apply the skill to a specific piece of text.
 - `rewrite`: return a clean version, then list what changed and why.
 - `edit`: change the file in place with minimal, targeted edits. Leave clean
   passages alone. Don't rewrite quoted material, code blocks, or text attributed
-  to someone else; flag those instead. Re-read after to confirm.
+  to someone else; flag those instead. On a durable document, see What it is
+  before you cut a negative. Re-read after to confirm.
 
 Default to `rewrite` unless the author names a file to fix (`edit`) or asks to
 flag only (`detect`). When writing *about* bad prose, cited examples are exempt;
@@ -173,7 +182,7 @@ Core doesn't name. Fix on sight when they add nothing.
 - Buried answer; throat-clearing opener ("Great question!", "In this section
   we'll explore"); padding closer ("Let me know if...").
 - Hedging, especially stacked ("could potentially", "may eventually"; pick one).
-- Describing a thing by what it is not, or by a removed predecessor ("there is no setup script") => say what it is. A ban, a changelog, or an answer to "what changed?" keeps the negative. See What it is.
+- Describing a thing by what it is not, or by a removed predecessor ("there is no setup script") => say what it is. Keep a fact, a limit, a warning, or a distinction. Unsure means keep it. See What it is.
 - Over-bolding: don't bold every key term, and don't lead list items with
   `**Word:** explanation` unless it's a real definition list.
 - Forced rule-of-three; vary groupings, two or four is fine.

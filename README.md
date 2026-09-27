@@ -13,6 +13,7 @@ cost clarity or brevity, not because they look a certain way.
 
 The core (clarity, brevity, accuracy, and what it is) always applies.
 What it is applies when the sentence is there to say what a thing is.
+A negative stays when it carries a fact the reader would miss.
 On top of the core, profiles tune the guidance for five contexts: direct
 communication, technical documentation, user-facing text, code comments,
 and commit messages. Each core principle carries a concrete test, and
