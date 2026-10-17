@@ -9,11 +9,14 @@ up existing text.
 
 Anything a person reads should be clear, brief, and accurate. Habits that hurt
 reading (a buried answer, hedging, inflated vocabulary) get fixed because they
-cost clarity or brevity, not because they look a certain way.
+cost clarity, brevity, or readability, not because they look a certain way.
 
-The core (clarity, brevity, accuracy, and what it is) always applies.
-What it is applies when the sentence is there to say what a thing is.
-A negative stays when it carries a fact the reader would miss.
+The core (clarity, brevity, rhythm, accuracy, and what it is) always applies.
+Rhythm is the counterweight to brevity: applied sentence by sentence, a
+brevity pass strips the words that join one claim to the next and leaves a
+wall of short declaratives. What it is applies when the sentence is there to
+say what a thing is. A negative stays when it carries a fact the reader would
+miss.
 On top of the core, profiles tune the guidance for five contexts: direct
 communication, technical documentation, user-facing text, code comments,
 and commit messages. Each core principle carries a concrete test, and
