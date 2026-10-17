@@ -3,13 +3,14 @@ name: prose
 description: Write clear, brief, accurate prose for a human reader. Use when writing or editing anything a person will read, such as a message, technical docs, a code comment, or a commit message. Applies guidance for the specific context and can also clean up existing text.
 ---
 
-Anything a person will read should be clear, brief, and accurate, and it
-should describe the thing as it is. Profiles weight clarity, brevity, and
-accuracy differently. The core always applies, and the profiles tune it
-for the context.
+Anything a person will read should be clear, brief, and accurate, it should
+describe the thing as it is, and it should read the way a person writes.
+Profiles weight clarity, brevity, and accuracy differently. The core always
+applies, and the profiles tune it for the context.
 
-Fix a habit when it costs clarity or brevity, not because it looks a certain
-way. That keeps the guidance useful across models, which each have their own tics.
+Fix a habit when it costs clarity, brevity, or readability, not because it
+looks a certain way. That keeps the guidance useful across models, which each
+have their own tics.
 
 ## Core
 
@@ -31,11 +32,30 @@ not, move it up.
 test: drop each word or qualifier, and if the sentence still means the same
 thing, leave it out. But brevity never removes load-bearing content: the reason,
 the number, the ticket link, anything the reader can't reconstruct. Cutting a
-needed clause is a worse error than one extra sentence. For inflated verbs to
-replace, see Inflated vocabulary in the Quick reference.
+needed clause is a worse error than one extra sentence. Apply the test to words
+and qualifiers, not to the joints between sentences; see Rhythm. For inflated
+verbs to replace, see Inflated vocabulary in the Quick reference.
 
 - "It's worth noting that the API will reject any input that happens to be empty." => "The API rejects empty input."
 - Too far: "Reverted." => "Reverted the cache change; it broke prod login (#482)."
+
+**Rhythm.** Vary sentence length and shape. Brevity is a per-sentence test, and
+a model that applies it sentence by sentence strips the connective tissue from
+every one of them. What comes out is a wall of short declaratives, each
+defensible alone, exhausting in a row: subject, verb, object, stop, repeat.
+That monotony is a bigger tell than any single word, and it is the most common
+way a brevity pass makes prose worse. Connective words (so, since, while,
+which, because) are not padding. They carry the relationship between two
+claims, and a reader who loses them has to rebuild it. When two short sentences
+state a cause and its effect, or a claim and its limit, join them. Test: read
+any three consecutive sentences aloud. If they run the same length and the same
+shape, combine two or restructure one.
+
+- "`open` returns as soon as Finder accepts the request. That does not mean the volume mounted." => "`open` returns as soon as Finder accepts the request, which does not mean the volume mounted."
+- Too far: four clauses chained into one 60-word sentence. Break it, and let some sentences be short on purpose.
+
+Rhythm shows over length, so it governs anything past a few lines: a doc
+section, a post, a long reply. Skip it on a three-line answer.
 
 **Accuracy.** Say only what you can stand behind. Keep a qualifier when it
 changes what is true; cut it when it only softens tone. "Usually" in "the cache
@@ -45,8 +65,10 @@ paths, and facts before asserting them.
 
 - "This groundbreaking fix dramatically improves everything." => "This fix cuts p99 latency by 40%."
 
-Brevity and accuracy pull against each other sometimes. Accuracy wins: a needed
-qualifier is not padding.
+Brevity pulls against the other two. Against accuracy, accuracy wins: a needed
+qualifier is not padding. Against rhythm, the shortest version loses whenever
+it costs the reader more than it saves: a clause that joins two claims earns
+its words.
 
 **What it is.** Use this when the sentence is there to say what a thing is:
 a README, an overview, a reference entry, or an agent direction that states
@@ -186,11 +208,9 @@ Core doesn't name. Fix on sight when they add nothing.
 - Over-bolding: don't bold every key term, and don't lead list items with
   `**Word:** explanation` unless it's a real definition list.
 - Forced rule-of-three; vary groupings, two or four is fine.
-- Uniform rhythm. Metronomic sentence and paragraph length is a bigger tell than
-  any single word. In anything longer than a few lines, read it back: if every
-  sentence runs the same length and shape, combine two or break one. Let some
-  paragraphs be one line. (Skip this for a three-line reply; rhythm only shows
-  over length.)
+- Uniform rhythm; chopped-up sentences that dropped the "so", "since", or
+  "which" joining them => see Rhythm in the Core. Let some paragraphs be one
+  line.
 - Vague attribution ("studies show") => cite it or cut it.
 
 Inflated vocabulary is filler: use the plainest word that keeps the meaning. Some
