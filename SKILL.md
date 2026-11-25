@@ -1,6 +1,6 @@
 ---
 name: prose
-description: Write clear, brief, accurate prose for a human reader. Use when writing or editing anything a person will read, such as a message, technical docs, a code comment, or a commit message. Applies guidance for the specific context and can also clean up existing text.
+description: Writing and editing guidance. Load only when the user explicitly requests the prose skill by name, such as "use skill:prose". Generic writing, editing, or polishing requests do not activate this skill.
 ---
 
 Anything a person will read should be clear, brief, and accurate, it should

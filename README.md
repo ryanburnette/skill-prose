@@ -1,9 +1,7 @@
 # skill-prose
 
-Write clear, brief, accurate prose for a human reader. Use when writing or
-editing anything a person will read: a message, technical docs, a code comment,
-or a commit message. Applies guidance tuned to the context, and can also clean
-up existing text.
+Writing and editing guidance for messages, technical docs, code comments, and
+commit messages. Activate it by explicitly requesting the `prose` skill by name.
 
 ## Why
 
